@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/piano.css">
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'js/main.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.appendChild(script, s);
+
+  });
+  </script>
+</head>
+
+<body>
+  <script type="text/template" id="keycontroller">
+  </script>
+  <script type="text/template" id="keyboard-template">
+    <ul id="piano">
+    </ul>
+    <div class="log"></div>
+    <div class="playback">
+      <input type="text">
+      <button>Play</button>
+    </div>
+  </script>
+  <script type="text/template" id="key-template">
+    <li>
+      <div class="anchor">
+        <%= key.get("letter") %>
+      </div><span></span></li>
+  </script>
+</body>
+
+</html>

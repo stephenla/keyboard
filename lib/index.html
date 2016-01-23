@@ -4,6 +4,7 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="css/piano.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
@@ -22,21 +23,23 @@
 
 <body>
   <script type="text/template" id="keycontroller">
+    <div class="keyboards"></div>
   </script>
   <script type="text/template" id="keyboard-template">
-    <ul id="piano">
+    <ul id="piano" class="keys clearfix">
     </ul>
-    <div class="log"></div>
-    <div class="playback">
-      <input type="text">
-      <button>Play</button>
+    <div class="log"><%= keyboard.get("log") %></div>
+    <div class="playback clearfix">
+      <span>
+        <input class="playback-input" type="text" value="<%= keyboard.get('playback') %>">
+        <button class="play">&#9658</button>
+      </span>
     </div>
   </script>
   <script type="text/template" id="key-template">
-    <li>
-      <div class="anchor">
-        <%= key.get("letter") %>
-      </div><span></span></li>
+      <div class="anchor key">
+        <div class="letter"><%= key.get("letter") %></div>
+      </div><span></span>
   </script>
 </body>
 

@@ -7,7 +7,31 @@
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
   <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
 
-  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+
+
+</head>
+
+<body>
+  <script type="text/template" id="keycontroller">
+    <div class="keyboards"></div>
+  </script>
+  <script type="text/template" id="keyboard-template">
+    <ul id="piano" class="keys clearfix">
+    </ul>
+    <div class="log"><%= keyboard.get("log") %></div>
+    <div class="playback clearfix">
+      <span>
+        <input class="playback-input" type="text" value="<%= keyboard.get('playback') %>">
+        <button class="play">&#9658</button>
+      </span>
+    </div>
+  </script>
+  <script type="text/template" id="key-template">
+      <div class="anchor key">
+        <div class="letter"><%= key.get("letter") %></div>
+      </div><span></span>
+  </script>
+    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="http://backbonejs.org/backbone-min.js"></script>
   
@@ -20,9 +44,5 @@
 
   <!-- include spec files here... -->
   <script src="spec/spec.js"></script>
-
-</head>
-
-<body>
 </body>
 </html>

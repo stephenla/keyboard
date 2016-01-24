@@ -6,10 +6,64 @@
 body {
   background: white; }
 
+.add-keyboard {
+  border: 1px solid transparent;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 5px #999;
+  position: absolute;
+  top: 5px;
+  right: 50px; }
+  .add-keyboard:before {
+    content: "+";
+    font-size: 38px;
+    width: 50px;
+    height: 50px;
+    top: -1px;
+    left: -1px;
+    position: absolute; }
+  .add-keyboard:active {
+    box-shadow: 0px 0px 3px #666;
+    width: 49px;
+    height: 49px; }
+    .add-keyboard:active:before {
+      width: 49px;
+      height: 49px; }
+
+.tooltip {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: #fff;
+  content: attr(title);
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 100px;
+  right: 48px;
+  top: 67px;
+  font-size: 14px; }
+  .tooltip:before {
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent;
+    border-width: 0px 7px 7px 7px;
+    bottom: 27px;
+    content: "";
+    right: 20px;
+    position: absolute;
+    z-index: 99; }
+
 .keyboards #p-wrapper {
+  width: 65%;
   padding-bottom: 10px;
   text-align: center;
   margin: auto; }
+  .keyboards #p-wrapper .error {
+    position: absolute;
+    color: red;
+    left: 0;
+    font-size: 12px; }
   .keyboards #p-wrapper #piano {
     width: auto; }
     .keyboards #p-wrapper #piano li:first-child > span {
@@ -36,6 +90,8 @@ body {
     overflow-y: hidden;
     border: 2px outset;
     text-transform: uppercase; }
+  .keyboards #p-wrapper .playback > span {
+    position: relative; }
   .keyboards #p-wrapper .playback input {
     height: 40px;
     padding: 5px;

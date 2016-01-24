@@ -6,7 +6,7 @@ describe("KeyboardApp", function() {
 
   describe("initialization", function() {
     describe("listenTo", function() {
-      it("should listen to KeyboardControllers", function () {
+      it("should listen to KeyboardControllers", function() {
         spyOn(keyboardApp, "listenTo");
         keyboardApp.initialize();
         expect(keyboardApp.listenTo).toHaveBeenCalled();
@@ -15,8 +15,15 @@ describe("KeyboardApp", function() {
   });
   describe("addToLog", function() {
     beforeEach(function() {
-      spyOn(keyboardApp, 'addToLog');
-      view = new Main.KeyboardController();
+      spyOn(keyboardApp, 'addToLog').and.callThrough();
+      var model = new Main.Keyboard({
+        keys: ["c", "d", "e", "f", "g", "a", "b"],
+        log: "",
+        playback: ""
+      });
+      view = new Main.KeyboardView({
+        model: model
+      });
       keyboardApp.addToLog(view, "a");
     });
     it("should take a view and a string as arguments", function() {
@@ -25,29 +32,28 @@ describe("KeyboardApp", function() {
     it("should add to the log string of the view", function() {
       expect(view.model.get("log")).toEqual("a");
     });
-    it("should throw an exception if the string is longer than 1 character", function() {
-      expect(function() {
-        keyboardApp.addToLog(view,"abc");
-      }).toThrowError("too many characters");
-    });
-  });  
+  });
 
   describe("addToPlayback", function() {
     beforeEach(function() {
-      spyOn(keyboardApp, 'addToPlayback');
-      view = new KeyboardController();
-      keyboardApp.addToPlayback(view, "a");
+      spyOn(keyboardApp, 'addToPlayback').and.callThrough();
+      var model = new Main.Keyboard({
+        keys: ["c", "d", "e", "f", "g", "a", "b"],
+        log: "",
+        playback: ""
+      });
+      view = new Main.KeyboardView({
+        model: model
+      });
+
+      keyboardApp.addToPlayback(view, "a,b,e");
     });
     it("should take a view and a string as arguments", function() {
-      expect(keyboardApp.addToPlayback).toHaveBeenCalledWith(view, "a");
+      expect(keyboardApp.addToPlayback).toHaveBeenCalledWith(view, "a,b,e");
     });
     it("should add to the playback string of the view", function() {
-      expect(view.model.get("playback")).toEqual("a");
+      expect(view.model.get("playback")).toEqual("a,b,e");
     });
-    it("should throw an exception if the string is longer than 1 character", function() {
-      expect(function() {
-        keyboardApp.addToPlayback(view,"abc");
-      }).toThrow("too many characters");
-    });
+
   });
 });

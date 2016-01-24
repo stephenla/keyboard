@@ -9,7 +9,7 @@ describe("KeyboardView", function () {
       expect(view.model instanceof Main.Keyboard).toBeTruthy();
     });
     it("should have a collection of keys", function () {
-      expect(view.collection.at(0) instanceof Main.KeyView).toBeTruthy();
+      expect(view.collection instanceof Main.Keys).toBeTruthy();
     });
   })
 });

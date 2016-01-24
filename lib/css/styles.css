@@ -54,30 +54,30 @@ body {
     position: absolute;
     z-index: 99; }
 
-.keyboards #p-wrapper {
+.keyboards .p-wrapper {
   width: 65%;
   padding-bottom: 10px;
   text-align: center;
   margin: auto; }
-  .keyboards #p-wrapper .error {
+  .keyboards .p-wrapper .error {
     position: absolute;
     color: red;
     left: 0;
     font-size: 12px; }
-  .keyboards #p-wrapper #piano {
+  .keyboards .p-wrapper .piano {
     width: auto; }
-    .keyboards #p-wrapper #piano li:first-child > span {
+    .keyboards .p-wrapper .piano li:first-child > span {
       display: none; }
-    .keyboards #p-wrapper #piano li {
+    .keyboards .p-wrapper .piano li {
       display: inline-block;
       float: none; }
-    .keyboards #p-wrapper #piano .key {
+    .keyboards .p-wrapper .piano .key {
       text-transform: uppercase; }
-    .keyboards #p-wrapper #piano .letter {
+    .keyboards .p-wrapper .piano .letter {
       position: relative;
       top: 80%;
       font-size: 30px; }
-  .keyboards #p-wrapper .log {
+  .keyboards .p-wrapper .log {
     background: white;
     height: 30px;
     width: 257px;
@@ -90,26 +90,26 @@ body {
     overflow-y: hidden;
     border: 2px outset;
     text-transform: uppercase; }
-  .keyboards #p-wrapper .playback > span {
+  .keyboards .p-wrapper .playback > span {
     position: relative; }
-  .keyboards #p-wrapper .playback input {
+  .keyboards .p-wrapper .playback input {
     height: 40px;
     padding: 5px;
     width: 209px;
     font-size: 16px; }
-  .keyboards #p-wrapper .playback button {
+  .keyboards .p-wrapper .playback button {
     height: 54px;
     width: 54px;
     padding: 5px;
     font-size: 16px; }
-  .keyboards #p-wrapper ul#piano li div.anchor.active {
+  .keyboards .p-wrapper ul.piano li div.anchor.active {
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     position: relative;
     top: 2px;
     height: 216px; }
-  .keyboards #p-wrapper ul#piano li div.anchor.active:before {
+  .keyboards .p-wrapper ul.piano li div.anchor.active:before {
     content: "";
     width: 0px;
     height: 0px;
@@ -119,7 +119,7 @@ body {
     position: absolute;
     left: 0px;
     top: 0px; }
-  .keyboards #p-wrapper ul#piano li div.anchor.active:after {
+  .keyboards .p-wrapper ul.piano li div.anchor.active:after {
     content: "";
     width: 0px;
     height: 0px;

@@ -63,7 +63,7 @@ body {
 }
 
 .keyboards {
-  #p-wrapper {
+  .p-wrapper {
     width: 65%;
     padding-bottom: 10px;
     text-align: center;
@@ -73,7 +73,7 @@ body {
       left: 0;
       font-size: 12px;
     }
-    #piano {
+    .piano {
       width: auto;
       li:first-child {
         > span {
@@ -125,7 +125,7 @@ body {
         font-size: 16px;
       }
     }
-    ul#piano li div.anchor.active {
+    ul.piano li div.anchor.active {
       -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
@@ -133,7 +133,7 @@ body {
       top: 2px;
       height: 216px;
     }
-    ul#piano li div.anchor.active:before {
+    ul.piano li div.anchor.active:before {
       content: "";
       width: 0px;
       height: 0px;
@@ -144,7 +144,7 @@ body {
       left: 0px;
       top: 0px;
     }
-    ul#piano li div.anchor.active:after {
+    ul.piano li div.anchor.active:after {
       content: "";
       width: 0px;
       height: 0px;

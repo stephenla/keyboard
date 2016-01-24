@@ -1,5 +1,6 @@
 # How to run
 Open `lib/index.html` in a web browser.
 
-# Jasmine tests
+# Tests
+Tests are written in Jasmine.
 Open `spec/SpecRunner.html` in a web browser.
